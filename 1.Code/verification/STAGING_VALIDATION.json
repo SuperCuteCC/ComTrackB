@@ -1,0 +1,24 @@
+{
+  "executed_at_utc": "2026-10-28T04:45:00+00:00",
+  "package": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NComit\\TrackB_FROM0863_LR2E5_E1_delivery",
+  "work_dir": "C:\\Users\\ysqhaoniibi\\AppData\\Local\\Temp\\trackb_delivery_staging_20261028",
+  "base": {
+    "passed_as": "--base-dir",
+    "source": "local copy of the pinned public weights held in the internal archive",
+    "sha256_verified": true,
+    "required_files_checked": ["model.safetensors", "config.json", "processor_config.json", "tokenizer_config.json", "chat_template.jinja"]
+  },
+  "videos": {
+    "passed_as": "--videos-dir",
+    "count": 568,
+    "sha256_verified": true
+  },
+  "final_adapter_sha256_verified": true,
+  "staged_inference_source": "videos path rewritten from J/'assets/videos' to the supplied video directory; original source unchanged",
+  "staged_python_syntax": "valid",
+  "record_scope": "packaging host only (Windows, no NVIDIA GPU, no CUDA/PyTorch runtime)",
+  "gpu_model_load_executed": false,
+  "gpu_inference_executed": false,
+  "frame_cache_rebuild_executed": false,
+  "note": "This record covers the packaging host only. Staging, checksum verification and Python syntax were checked here; GPU work was executed on the original Linux server (8 x NVIDIA RTX 6000D): the 8-question smoke run and the full 3,289-question rerun are recorded in verification/SERVER_RUN_20261028.json, and the frame-cache rebuild is recorded there and in provenance/SERVER_VERIFICATION_20261028.json."
+}

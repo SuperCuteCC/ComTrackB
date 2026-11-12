@@ -1,0 +1,25 @@
+{
+  "policy": "Files listed here are deliberately not part of this delivery. Hashes let a reviewer match them if obtained from the stated source or the internal archive.",
+  "excluded": [
+    {
+      "path": "weights/base_model/model.safetensors",
+      "bytes": 10350019328,
+      "sha256": "b0a64f8fc11e9eb66b027901f503426557e45dcb61cbeb83a4fd529fe874f1bc",
+      "reason": "Public base weight. Download it from the pinned revision; see weights/base_model/BASE_FILES.json.",
+      "retrieval": "huggingface-cli download MirroS-Lab/Code-as-World-VL-4B --revision 104afb28b4f1eee1d1131a50281be590e930babb"
+    },
+    {
+      "path": "data/videos/*.mp4",
+      "files": 568,
+      "bytes": 529911876,
+      "reason": "Public QuantiPhy video subset. Source revision and per-file SHA-256 are supplied in data/videos/download_verified_czq.json and data/VIDEO_MANIFEST_SHA256.csv.",
+      "retrieval": "huggingface-cli download PaulineLi/QuantiPhy --repo-type dataset --revision 072ede13a186ee71d76ae628692cbdb11c4e1721"
+    },
+    {
+      "path": "training_materials/recovery-rolling.pt",
+      "bytes": 390282589,
+      "sha256": "e84872ef061f7c8ee585090cf7edd5714126f47222a9f3705097b502482cee51",
+      "reason": "Intermediate optimizer/RNG recovery checkpoint. Not an inference weight; training receipts are still supplied. Held in the internal archive."
+    }
+  ]
+}

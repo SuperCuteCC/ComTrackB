@@ -1,0 +1,23 @@
+{
+  "active_tasks": [],
+  "blur_radius": 40,
+  "devices": [
+    "cuda:0",
+    "cuda:1"
+  ],
+  "done": 555,
+  "error": 1,
+  "input_dir": "/home/tiangexiang/quantiphy/0_videos_release",
+  "model_id": "facebook/sam3",
+  "output_dir": "/home/tiangexiang/quantiphy/0_videos_release_face_blur",
+  "progress_log": "/home/tiangexiang/quantiphy/0_videos_release_face_blur/_face_blur_progress.jsonl",
+  "prompt": "face",
+  "queued_videos": 556,
+  "remaining": 0,
+  "run_id": "20260331T175418Z",
+  "running": 0,
+  "skipped": 0,
+  "started_at": "2026-03-31T17:54:18.271150+00:00",
+  "total_videos": 556,
+  "updated_at": "2026-03-31T19:57:19.793178+00:00"
+}

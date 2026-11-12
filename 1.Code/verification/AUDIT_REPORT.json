@@ -1,0 +1,110 @@
+{
+  "audited_at_utc": "2026-10-28T10:21:33.092621+00:00",
+  "scope": "trimmed delivery",
+  "status": "DELIVERY_STATIC_CHECKS_PASSED",
+  "context": "The static checks below run on the packaging host; GPU execution records are in provenance/SERVER_VERIFICATION_20261028.json.",
+  "checks": {
+    "historical_inventory_integrity": {
+      "passed": true,
+      "details": {
+        "entries": 120,
+        "mismatches": [],
+        "unlisted": 0
+      }
+    },
+    "public_base_identity_and_files": {
+      "passed": true,
+      "details": {
+        "repository": "MirroS-Lab/Code-as-World-VL-4B",
+        "revision": "104afb28b4f1eee1d1131a50281be590e930babb",
+        "license_declaration": "Apache-2.0",
+        "weight_identity": "referenced; SHA-256 matches the public LFS object",
+        "bundled_public_files_verified": 8,
+        "tensor_index_entries": 724
+      }
+    },
+    "pure_lora_and_base_tensor_compatibility": {
+      "passed": true,
+      "details": [
+        {
+          "path": "weights/final_lora",
+          "tensor_count": 496,
+          "parameters": 32464896,
+          "sha256": "36d20e83e193329568783c7831a81507bb030aa5708e62faaaceaa18e7ee95f3"
+        },
+        {
+          "path": "weights/initial_lora_0863",
+          "tensor_count": 496,
+          "parameters": 32464896,
+          "sha256": "cbbe9f61ce4e73d0467f98fcd67882c2dc2f36df32cbf07accf85e06519ab0a5"
+        }
+      ]
+    },
+    "original_code_and_lora_training_guard": {
+      "passed": true,
+      "details": {
+        "historical_hashes_verified": [
+          "PLAN_FROZEN.json",
+          "teacher-FROZEN.csv",
+          "teacher-units.json",
+          "input-template-NO-ANSWERS.csv",
+          "train.py",
+          "infer.py",
+          "prepare.py",
+          "worker.py",
+          "finalize.py",
+          "answer_contract.py",
+          "UNIT_REPAIR_PROVENANCE.json"
+        ],
+        "original_python_syntax": "valid",
+        "trainable_parameter_guard": "LoRA only"
+      }
+    },
+    "training_receipts_and_excluded_artifacts": {
+      "passed": true,
+      "details": {
+        "recovery_checkpoint": "excluded; original SHA-256 and byte count recorded in training_materials/EXCLUDED_ARTIFACTS.json",
+        "pickle_executed": false,
+        "epochs": 1,
+        "learning_rate": 2e-05,
+        "completed_steps": 412,
+        "original_forward_backward_receipt": {
+          "id": "1155",
+          "answer": "10.0 m",
+          "loss": 0.0003500858729239553,
+          "nonzero_lora_gradient_tensors": 496,
+          "answer_only_mask_verified": true,
+          "trainable_parameters": 32464896,
+          "time": 1792768260.4117684
+        }
+      }
+    },
+    "training_data_videos_and_prompts": {
+      "passed": true,
+      "details": {
+        "rows": 3289,
+        "videos": 568,
+        "videos_bundled": 0,
+        "video_manifest_verified": true,
+        "teacher_targets_and_units": "all matched",
+        "frozen_prompt_metadata_hash": "matched"
+      }
+    },
+    "submission_and_generation_replay": {
+      "passed": true,
+      "details": {
+        "rows": 3289,
+        "csv_sha256": "1216ece8fae28f39431a719973794381d29e813214eacbcb66a1da82cb5d5b56",
+        "all_answer_contract_attempts_replayed": true
+      }
+    }
+  },
+  "failures": [],
+  "limitations": [
+    "This delivery references the 10.35 GB public base weight and the 568 public videos instead of bundling them; both are pinned by revision and SHA-256 and can be fetched with the commands in weights/base_model/BASE_FILES.json and data/VIDEO_MANIFEST_SHA256.csv.",
+    "training_materials/recovery-rolling.pt is excluded; its SHA-256 and byte count are recorded in training_materials/EXCLUDED_ARTIFACTS.json, but the 390 MB file itself is not present here to re-check.",
+    "This offline audit does not load the GPU model: it runs on the Windows packaging host, while the GPU model load, smoke run, full inference rerun and frame-cache reconstruction were executed on the original Linux server with 8 x RTX 6000D and are documented in provenance/SERVER_VERIFICATION_20261028.json.",
+    "Historical scripts retain server paths; the temporary 16-frame training cache itself is not delivered, but prepare_runtime.py rebuilt all 568 frame files on that server and every file matched the frozen cache manifest by SHA-256.",
+    "The frozen training plan records the teacher as pseudo-labels rather than ground truth and its formal eligibility as unconfirmed; eligibility is determined by the organizers rather than self-certified here."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "verified_at_utc": "2026-10-27T19:30:10.978142+00:00",
+  "verification_method": "Unauthenticated HTTPS GET; API returned HTTP 200 with private=false, gated=false",
+  "repository": "MirroS-Lab/Code-as-World-VL-4B",
+  "model_url": "https://huggingface.co/MirroS-Lab/Code-as-World-VL-4B",
+  "revision": "104afb28b4f1eee1d1131a50281be590e930babb",
+  "api_url": "https://huggingface.co/api/models/MirroS-Lab/Code-as-World-VL-4B/revision/104afb28b4f1eee1d1131a50281be590e930babb?blobs=true",
+  "raw_response": "provenance/PUBLIC_BASE_API_20261028.json",
+  "license_declaration": "apache-2.0 in repository cardData and supplied original model card",
+  "license_text_source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "license_text_file": "licenses/Apache-2.0.txt",
+  "upstream_base_as_declared_by_model_card": "Qwen/Qwen3.5-4B"
+}

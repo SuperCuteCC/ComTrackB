@@ -1,0 +1,12 @@
+{
+  "time": 1792778372.1048179,
+  "files": {
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "adapter_model.safetensors": "36d20e83e193329568783c7831a81507bb030aa5708e62faaaceaa18e7ee95f3",
+    "README.md": "1b574c353661bf6c1e16137747dae0ff96a96f94b93cbcf3c5a00c2c6e21b51a",
+    "processor_config.json": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+    "chat_template.jinja": "22e67fd2f9b2fc41a36bc509c7aa87a96963dd76e7eb84977d907672d540355b",
+    "adapter_config.json": "f208b4d0c617e905805fb0e5a89b2698894331f858a7cb8805b9a1e9e3bda5bd",
+    "tokenizer_config.json": "7488550a894dcf741616126e322ea31d66cf9457b59ec5825f4c7efdced421f8"
+  }
+}

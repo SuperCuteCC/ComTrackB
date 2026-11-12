@@ -1,0 +1,14 @@
+{
+  "jobs": [
+    {
+      "name": "student",
+      "gpu": 0,
+      "epochs": 1,
+      "lr": 2e-05,
+      "base": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+      "processor": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+      "teacher_sha256": "98d965e87049e37485a593e7955662f70f2594a8669f497ade0b5f7072db54ab",
+      "init_adapter": "/home/ubuntu/czq/experiments/distill0863-lr2e5-e1-codex7-20261023T150330Z/init-adapter"
+    }
+  ]
+}

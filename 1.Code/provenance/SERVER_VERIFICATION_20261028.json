@@ -1,0 +1,122 @@
+{
+  "record": "Re-execution of the submitted inference and reconstruction of the training frame cache on the original server",
+  "date_local": "2026-10-28 Asia/Shanghai",
+  "date_utc": "smoke 2026-10-27T22:30Z-22:31Z; frame cache rebuilt 2026-10-27T22:45Z; full replay 2026-10-27T22:31Z-2026-10-28T00:03Z",
+  "note": "The server clock runs in UTC; every timestamp below is UTC except where marked. The 20261028 date in this file name is the Asia/Shanghai date.",
+  "host": {
+    "hostname": "6000d-server",
+    "gpus": 8,
+    "gpu_model": "NVIDIA RTX 6000D",
+    "gpu_memory_mib_per_device": 85651,
+    "gpu_driver_version": "595.99.02",
+    "cuda_version": "12.8",
+    "cpu_cores": 100,
+    "memory_gb": 755,
+    "gpu_used": 0
+  },
+  "software": {
+    "python": "3.11.16",
+    "venv": "/home/ubuntu/venvs/codeasworld_czq",
+    "extra_packages_on_pythonpath": "/home/ubuntu/czq/experiments/worldmodel-20261014-czq/student0804-deps",
+    "torch": "2.10.0",
+    "transformers": "5.11.0",
+    "peft": "0.20.0",
+    "accelerate": "1.15.0",
+    "numpy": "2.2.6",
+    "decord": "0.6.0",
+    "qwen-vl-utils": "0.0.14",
+    "jinja2": "3.1.6",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "1.30.0",
+    "pillow": "12.3.0",
+    "av": "18.1.0",
+    "protobuf": "6.33.6",
+    "sentencepiece": "0.2.2"
+  },
+  "inputs": {
+    "delivery_copy_on_server": "/home/ubuntu/czq/delivery-from0863-20261028",
+    "public_base": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+    "public_videos": "/home/ubuntu/data/quantiphy_czq/QuantiPhy",
+    "base_weight_sha256_verified_against_frozen_plan": true,
+    "videos_sha256_verified_against_manifest": 568,
+    "final_adapter_sha256": "36d20e83e193329568783c7831a81507bb030aa5708e62faaaceaa18e7ee95f3",
+    "answer_contract_sha256": "4607716f2bd1839c705df747ebf43805452adf9cc766875e7211103d03b9b43d",
+    "inference_script_sha256": "ab8c3ecd4e71fc5c00568639aaadb3fe48083233c73783b7fe6741c39c51a992"
+  },
+  "gpu_model_load": {
+    "verified": true,
+    "how": "code/infer.py loaded the public base with AutoModelForImageTextToText (BF16, sdpa) and applied the delivered LoRA adapter through PeftModel.from_pretrained; the journal records the adapter SHA-256 of every row"
+  },
+  "smoke_run": {
+    "state": "SMOKE_COMPLETE",
+    "items": 8,
+    "parse_failures": 0,
+    "elapsed_seconds": 23.05263876914978,
+    "started_utc": "2026-10-27T22:30:41Z",
+    "finished_utc": "2026-10-27T22:31:04Z",
+    "output_dir": "/home/ubuntu/czq/verify-from0863-20261028/student/epoch1-hf-smoke-czq",
+    "answers_identical_to_frozen_journal": 8,
+    "item_ids": ["1", "3289", "5", "3263", "1037", "2764", "1044", "2946"]
+  },
+  "full_inference_replay": {
+    "state": "COMPLETE",
+    "items": 3289,
+    "parse_failures": 0,
+    "elapsed_seconds": 5478.9206783771515,
+    "elapsed_human": "91 min 19 s",
+    "started_utc": "2026-10-27T22:31:45Z",
+    "finished_utc": "2026-10-28T00:03:04Z",
+    "output_dir": "/home/ubuntu/czq/verify-from0863-20261028/student/epoch1-infer32f-czq",
+    "settings": {
+      "backend": "transformers-peft",
+      "decoding": "greedy (do_sample=false)",
+      "max_new_tokens": 64,
+      "frames": 32,
+      "frame_sampling": "min(32, floor(total_frames/2)*2) frames decoded per video, max_pixels=262144, video_fps=2.0",
+      "seed": 1,
+      "precision": "bfloat16",
+      "attention": "sdpa"
+    },
+    "outputs": {
+      "submission_csv_sha256": "1216ece8fae28f39431a719973794381d29e813214eacbcb66a1da82cb5d5b56",
+      "generation_journal_sha256": "f2822b3461d72c69dae4f99a5ba2a7e6d28ae92f2ffebc6df1795c3b1f23756f",
+      "predictions_frozen_sha256": "398174f2bbe6049af3119ab6fa09b974b2e8eb277a0df424ef6a2e880b6e3e25",
+      "journal_rows": 3289
+    },
+    "comparison_to_submitted_run": {
+      "submission_csv": "byte-identical to submission/TRACKB-FROM0863-MAIN7493-LR2E5-E1-UNTESTED.csv",
+      "generation_journal": "byte-identical to outputs/generations-hf.jsonl",
+      "predictions_frozen": "byte-identical to outputs/predictions-FROZEN.json",
+      "conclusion": "All three inference artifacts were reproduced exactly on the original server with the delivered code, adapter, base weight and videos."
+    }
+  },
+  "frame_cache_reconstruction": {
+    "state": "ALL_568_CACHE_HASHES_MATCHED",
+    "videos": 568,
+    "training_rows_remapped": 3289,
+    "manifest": "provenance/CACHE_SOURCE_MANIFEST.json",
+    "staging_report": "verification/SERVER_STAGING_REPORT_CACHE_REBUILD.json",
+    "result": "Every reconstructed .npy matched the frozen cache manifest in both byte count and SHA-256; the rebuilt training/train.json points at the reconstructed cache.",
+    "work_dir": "/home/ubuntu/czq/cache-rebuild2-20261028",
+    "cache_dir": "/home/ubuntu/czq/cache-rebuild-20261028/cache16",
+    "videos_decoded_below_16_frames": {
+      "internet_0038.mp4": 14,
+      "internet_0067.mp4": 12
+    },
+    "short_video_note": "The archived helper requests a fixed 16 training frames. Source videos shorter than 16 frames decode at the largest even frame count available, because qwen_vl_utils rounds an explicit odd nframes to the next multiple of 2 and would raise instead of clamping. internet_0038 (15 frames, decoded at 14) is the only odd case; preparation of that single video at 14 frames reproduced its frozen .npy byte-for-byte.",
+    "first_attempt": {
+      "state": "STOPPED_AT_531_OF_568",
+      "reason": "internet_0038.mp4 has 15 frames; the fixed 16-frame request raised ValueError: nframes should in interval [2, 15], but got 16, and the historical fallback re-requested an odd 15 frames, which was rounded back to 16",
+      "disposition": "verification/prepare_runtime.py now sets the frame count per video and supports reusing an interrupted cache directory; the 531 files written by the first attempt were re-verified by SHA-256 and reused"
+    }
+  },
+  "not_performed": [
+    "The one-epoch LoRA continuation was not re-executed. Its training command was staged and printed by prepare_runtime.py, but retraining would not be bit-identical on GPU and would take about 2 h 49 min.",
+    "No submission, upload or external publication was performed during this verification."
+  ],
+  "limitations": [
+    "Exact reproduction was obtained on the same host and library versions as the original run; a different GPU, driver or library set may change BF16 kernel results.",
+    "Training reproducibility is supported by the frozen plan, receipts and a fully reconstructed frame cache, not by a new training run."
+  ]
+}

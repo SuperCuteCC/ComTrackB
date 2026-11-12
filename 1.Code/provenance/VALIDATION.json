@@ -1,0 +1,10 @@
+{
+  "rows": 3289,
+  "unique_ids": 3289,
+  "columns": 10,
+  "metadata_and_order_preserved": true,
+  "all_outputs_checkpoint_verified": true,
+  "no_teacher_fallback": true,
+  "unresolved_ids": [],
+  "official_score": null
+}

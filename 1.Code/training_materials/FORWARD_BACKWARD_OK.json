@@ -1,0 +1,9 @@
+{
+  "id": "1155",
+  "answer": "10.0 m",
+  "loss": 0.0003500858729239553,
+  "nonzero_lora_gradient_tensors": 496,
+  "answer_only_mask_verified": true,
+  "trainable_parameters": 32464896,
+  "time": 1792768260.4117684
+}

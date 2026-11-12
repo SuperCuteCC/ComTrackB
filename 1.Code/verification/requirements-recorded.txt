@@ -1,0 +1,10 @@
+# Historical partial record. The exact lock read from the original server is
+# requirements-resolved.txt (which also pins jinja2 and qwen-vl-utils).
+# Python 3.11.16; CUDA 12.8. Install the matching torch CUDA build separately.
+torch==2.10.0
+transformers==5.11.0
+peft==0.20.0
+numpy==2.2.6
+decord==0.6.0
+# Also required: jinja2, qwen_vl_utils. Exact historical versions are unrecorded.
+# No guessed version pins are supplied for those dependencies.

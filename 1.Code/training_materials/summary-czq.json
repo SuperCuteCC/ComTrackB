@@ -1,0 +1,24 @@
+{
+  "initial_adapter": "/home/ubuntu/czq/experiments/distill0863-lr2e5-e1-codex7-20261023T150330Z/init-adapter",
+  "optimizer_reset": true,
+  "base": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+  "processor": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+  "rows": 3289,
+  "epochs": 1,
+  "lr": 2e-05,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "grad_accum": 8,
+  "seed": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.16398794934908895,
+      "seconds": 10114.469272613525
+    }
+  ],
+  "training_labels": "Exact original parsed_value strings from latest MAIN7493 teacher plus own-question units; all 3289 rows; inherited provenance gaps preserved; not ground truth",
+  "merged_weights_retained": false,
+  "teacher_manifest": "/home/ubuntu/czq/experiments/distill0863-lr2e5-e1-codex7-20261023T150330Z/student/manifest-czq.json",
+  "validation_accuracy": null
+}

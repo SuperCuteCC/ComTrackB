@@ -1,0 +1,17 @@
+{
+  "backend": "transformers-peft",
+  "do_sample": false,
+  "max_new_tokens": 64,
+  "frames": 32,
+  "max_pixels": 262144,
+  "seed": 1,
+  "base": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+  "adapter": "/home/ubuntu/czq/experiments/distill0863-lr2e5-e1-codex7-20261023T150330Z/student/adapter_epoch_1-czq",
+  "adapter_sha256": "36d20e83e193329568783c7831a81507bb030aa5708e62faaaceaa18e7ee95f3",
+  "answer_contract_sha256": "4607716f2bd1839c705df747ebf43805452adf9cc766875e7211103d03b9b43d",
+  "whole_answer_validation": true,
+  "retry_policy": "At most one uniform own-unit six-significant-digit clarification; unresolved remains blank",
+  "teacher_sha256": "98d965e87049e37485a593e7955662f70f2594a8669f497ade0b5f7072db54ab",
+  "template_sha256": "5f1e8367308ebaee6718929d74a175fecd6813a8d5862fc72a709d07d2328c18",
+  "script_sha256": "ab8c3ecd4e71fc5c00568639aaadb3fe48083233c73783b7fe6741c39c51a992"
+}

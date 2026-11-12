@@ -1,0 +1,18 @@
+{
+  "time": 1792768219.7608404,
+  "rows": 3289,
+  "videos": 568,
+  "base_sha256": "b0a64f8fc11e9eb66b027901f503426557e45dcb61cbeb83a4fd529fe874f1bc",
+  "cache_samples_verified": true,
+  "all_3289_prompts_reconstructed_and_matched": true,
+  "all_3289_teacher_metadata_matched": true,
+  "unit_counts": {
+    "cm": 593,
+    "cm/s": 218,
+    "cm/s^2": 15,
+    "m": 1642,
+    "m/s": 680,
+    "m/s^2": 135,
+    "mm": 6
+  }
+}

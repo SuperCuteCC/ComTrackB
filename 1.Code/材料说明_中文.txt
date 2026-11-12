@@ -1,0 +1,27 @@
+本目录对应 TRACKB-FROM0863-MAIN7493-LR2E5-E1-UNTESTED.csv，包含最终适配器、初始化适配器及本轮续训和推理材料。
+
+已确认：
+1. 底座为 MirroS-Lab/Code-as-World-VL-4B。2026-10-28 已匿名访问 Hugging Face 核实公开、无需授权访问，模型卡标注 Apache-2.0。固定版本全部 9 个公开文件已逐一核对；10.35 GB 的 model.safetensors 未随包，按固定版本下载即可，SHA-256 为 b0a64f8fc11e9eb66b027901f503426557e45dcb61cbeb83a4fd529fe874f1bc。
+2. 微调方式为纯 LoRA。训练器仅更新 LoRA 参数；随包两份适配器只包含 LoRA A/B 张量（各 496 个），尺寸与底座张量索引一致。底座张量索引（724 个张量的名称、类型、形状）已随包，可在不下载 10.35 GB 权重的情况下核对兼容性。
+3. 最终推理使用底座 + weights/final_lora。initial_lora_0863 是本轮训练的初始化适配器，仅用于训练起点，不要与最终 LoRA 叠加加载。
+4. 随包内容：提交 CSV、最终适配器、初始化适配器、本轮续训与推理代码、伪标签与单位表、训练 JSON 与计划、训练摘要、步数状态、前反向验证记录、推理配置、生成日志、冻结预测、来源与校验记录、底座小文件与张量索引、视频清单、Apache-2.0 文本。
+5. 7 组静态审计全部通过：3,289 条训练目标和单位一致，568 个视频逐一有 SHA-256 记录，历史答案校验全部重放通过，提交 CSV 与冻结结果逐字节一致。
+6. 说明文档：SUBMISSION_RECORD.md（提交身份、时间戳与逐步复现命令、期望哈希）、README 中的安装/运行/硬件/耗时说明与 Dockerfile、METHOD.md（一页方法说明）、PREDICTION_INDEPENDENCE.md（逐题推理流程与代码依据）。
+7. 官方门户结果（2026-10-24 11:53，北京时间）：Track B · Open weight，pass，平均 MRA 0.866（S2 0.860 / D2 0.887 / S3 0.851 / D3 0.866），invalid 0.0%，3,010 matched / 0 missing；较初始化适配器 0.863 提高 0.003。运行硬件为原 Linux 服务器的 8 张 NVIDIA RTX 6000D（85,651 MiB/卡，驱动 595.99.02，CUDA 12.8；任务使用 GPU 0）。记录见 provenance/OFFICIAL_RESULT_FROM0863.json。
+
+未随包（按哈希引用，或在内部档案中保留）：
+1. 底座 model.safetensors（10.35 GB）与 568 个 QuantiPhy 视频（约 530 MB）。两者均为公开资源，已按固定版本和逐文件 SHA-256 锁定；verification/prepare_runtime.py 会先校验再使用。
+2. training_materials/recovery-rolling.pt（390 MB，训练中途优化器/RNG 恢复点），不是推理权重；其大小与 SHA-256 记录在 training_materials/EXCLUDED_ARTIFACTS.json。
+
+复现边界：
+1. 临时 16 帧缓存已丢失，但已于 2026-10-28 在原 Linux 服务器上用 verification/prepare_runtime.py --rebuild-cache 重建：568 个 .npy 全部与冻结清单的字节数和 SHA-256 一致，3,289 条训练行已重新指向重建缓存。源视频不足 16 帧时按不超过总帧数的最大偶数解码（仅 internet_0038 取 14 帧、internet_0067 取 12 帧）。单轮训练本身未重跑。
+
+教师与复现说明：
+- 训练目标是 MAIN7493 伪标签，由 Track A 参考模型（平均 MRA 0.874，记录 MAIN-REFERENCE-COMBINED74_100_93_098-20261023-A-0355）生成，不是真值。
+- 2026-10-28 已在原 Linux 服务器（8 张 RTX 6000D，GPU 0）上完成复跑：8 题 smoke 无解析失败（23.05 s，8 条回答与冻结日志逐字符相同）；3,289 题全量复跑 5,478.92 s（91 分 19 秒）、0 解析失败，提交 CSV、生成日志、冻结预测三份产物与随包文件逐字节相同。记录见 provenance/SERVER_VERIFICATION_20261028.json 与 verification/SERVER_RUN_20261028.json。
+- 最终适配器是从随包的 .863 初始化适配器继续训练一轮得到的。
+
+材料与来源总览：WEIGHTS_AND_FINETUNING.md。
+检查结果：verification/AUDIT_REPORT.json。
+运行准备：verification/README.md。
+文件清单与校验：MANIFEST_SHA256.csv。

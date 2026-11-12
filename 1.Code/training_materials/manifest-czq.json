@@ -1,0 +1,7 @@
+{
+  "label_summary": "Exact original parsed_value strings from latest MAIN7493 teacher plus own-question units; all 3289 rows; inherited provenance gaps preserved; not ground truth",
+  "teacher_sha256": "98d965e87049e37485a593e7955662f70f2594a8669f497ade0b5f7072db54ab",
+  "input_metadata_hash": "5133c0103fb80c7cdc149cb0b1277f032b3afdb388e1bd14c15793910f1dab66",
+  "training_data_sha256": "1069a36a1f255309b72033dacacaaae29dc48fc5a4c9fac534980f849810aeeb",
+  "old_answers_discarded": true
+}

@@ -1,0 +1,146 @@
+{
+  "created_utc": "2026-10-23T15:06:37.343166+00:00",
+  "remote_root": "/home/ubuntu/czq/experiments/distill0863-lr2e5-e1-codex7-20261023T150330Z",
+  "jobs": [
+    {
+      "name": "student",
+      "gpu": 0,
+      "epochs": 1,
+      "lr": 2e-05,
+      "base": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+      "processor": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+      "teacher_sha256": "98d965e87049e37485a593e7955662f70f2594a8669f497ade0b5f7072db54ab",
+      "init_adapter": "/home/ubuntu/czq/experiments/distill0863-lr2e5-e1-codex7-20261023T150330Z/init-adapter"
+    }
+  ],
+  "starting_student_official_score": 0.863,
+  "parent_official_record_id": "TRACKB-MAIN7493-UNITFIX-E1-20261023-B-1327",
+  "parent_csv_sha256": "d148f2c5881e47b093e9dba5ccdfb717df84d414daaa12ba2caa5c37a00ddbc4",
+  "teacher": {
+    "path": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NeurIPS Challenge\\validation-handle\\codex-next-round-after0868-20261018-night\\coordinator-after378-combined-s3-20261022\\candidates\\MAIN0873-S3SIMSIZE74-100-SIMREM93-098-EXPERIMENTAL-UNTESTED-20261022.csv",
+    "sha256": "98d965e87049e37485a593e7955662f70f2594a8669f497ade0b5f7072db54ab",
+    "bytes": 762976
+  },
+  "teacher_record": {
+    "average_mra": 0.874,
+    "official_record_id": "MAIN-REFERENCE-COMBINED74_100_93_098-20261023-A-0355",
+    "teacher_is_ground_truth": false,
+    "formal_eligibility_confirmed": false
+  },
+  "initial_adapter": {
+    "path": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NeurIPS Challenge\\validation-handle\\codex-next-round-after0868-20261018-night\\work\\codex7\\distill-main7493-unitfixed-20261022T200348Z\\downloaded\\student\\adapter_epoch_1-czq",
+    "remote_path": "/home/ubuntu/czq/experiments/distill0863-lr2e5-e1-codex7-20261023T150330Z/init-adapter",
+    "files": [
+      {
+        "path": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NeurIPS Challenge\\validation-handle\\codex-next-round-after0868-20261018-night\\work\\codex7\\distill-main7493-unitfixed-20261022T200348Z\\downloaded\\student\\adapter_epoch_1-czq\\adapter_config.json",
+        "sha256": "80437adbe4e7da690e3d85997150674ccf96de195c09e9ea8403280ba7dda34d",
+        "bytes": 1264
+      },
+      {
+        "path": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NeurIPS Challenge\\validation-handle\\codex-next-round-after0868-20261018-night\\work\\codex7\\distill-main7493-unitfixed-20261022T200348Z\\downloaded\\student\\adapter_epoch_1-czq\\adapter_model.safetensors",
+        "sha256": "cbbe9f61ce4e73d0467f98fcd67882c2dc2f36df32cbf07accf85e06519ab0a5",
+        "bytes": 129934448
+      },
+      {
+        "path": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NeurIPS Challenge\\validation-handle\\codex-next-round-after0868-20261018-night\\work\\codex7\\distill-main7493-unitfixed-20261022T200348Z\\downloaded\\student\\adapter_epoch_1-czq\\chat_template.jinja",
+        "sha256": "22e67fd2f9b2fc41a36bc509c7aa87a96963dd76e7eb84977d907672d540355b",
+        "bytes": 7585
+      },
+      {
+        "path": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NeurIPS Challenge\\validation-handle\\codex-next-round-after0868-20261018-night\\work\\codex7\\distill-main7493-unitfixed-20261022T200348Z\\downloaded\\student\\adapter_epoch_1-czq\\processor_config.json",
+        "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+        "bytes": 1191
+      },
+      {
+        "path": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NeurIPS Challenge\\validation-handle\\codex-next-round-after0868-20261018-night\\work\\codex7\\distill-main7493-unitfixed-20261022T200348Z\\downloaded\\student\\adapter_epoch_1-czq\\README.md",
+        "sha256": "1b574c353661bf6c1e16137747dae0ff96a96f94b93cbcf3c5a00c2c6e21b51a",
+        "bytes": 5244
+      },
+      {
+        "path": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NeurIPS Challenge\\validation-handle\\codex-next-round-after0868-20261018-night\\work\\codex7\\distill-main7493-unitfixed-20261022T200348Z\\downloaded\\student\\adapter_epoch_1-czq\\tokenizer.json",
+        "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+        "bytes": 19989325
+      },
+      {
+        "path": "C:\\Users\\ysqhaoniibi\\Desktop\\CC\\JX\\NeurIPS Challenge\\validation-handle\\codex-next-round-after0868-20261018-night\\work\\codex7\\distill-main7493-unitfixed-20261022T200348Z\\downloaded\\student\\adapter_epoch_1-czq\\tokenizer_config.json",
+        "sha256": "7488550a894dcf741616126e322ea31d66cf9457b59ec5825f4c7efdced421f8",
+        "bytes": 1164
+      }
+    ],
+    "checkpoint_source_csv_sha256": "d148f2c5881e47b093e9dba5ccdfb717df84d414daaa12ba2caa5c37a00ddbc4",
+    "checkpoint_official_score": 0.863,
+    "official_record_id": "TRACKB-MAIN7493-UNITFIX-E1-20261023-B-1327"
+  },
+  "base": {
+    "historical_name": "MirroS-Lab/Code-as-World-VL-4B",
+    "remote_path": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+    "historical_weight_sha256": "b0a64f8fc11e9eb66b027901f503426557e45dcb61cbeb83a4fd529fe874f1bc",
+    "must_verify_live_before_training": true
+  },
+  "cache_contract": {
+    "input_hash": "5133c0103fb80c7cdc149cb0b1277f032b3afdb388e1bd14c15793910f1dab66",
+    "frame_samples": [
+      {
+        "id": "1",
+        "sha256": "c2d49f4a69409ee7a98b840a0fbe36cc91852cda86e7bfdf55cd43ba00781317"
+      },
+      {
+        "id": "1645",
+        "sha256": "897397c9065a214961cf680d4d814006026b9de5b6315cd69990f6946e6b468a"
+      },
+      {
+        "id": "3289",
+        "sha256": "702dc2812dd2e20affc72b2e7b8284f1339c8012aff9f00c51766c5d9a6c4db4"
+      }
+    ]
+  },
+  "training_cache_source": "/dev/shm/codex7-distill0863-lr2e5-20261023T150330Z/training-source.json",
+  "training_cache_directory": "/dev/shm/codex7-distill0863-lr2e5-20261023T150330Z/cache",
+  "cache_manifest_sha256": null,
+  "training": {
+    "epochs": 1,
+    "rows": 3289,
+    "learning_rate": 2e-05,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "grad_accum": 8,
+    "seed": 1,
+    "train_frames": 16,
+    "optimizer_reset": true,
+    "loss": "answer_only",
+    "warmup_fraction": 0.03,
+    "bf16": true,
+    "gradient_checkpointing": true,
+    "lora_dropout": 0.05,
+    "weight_decay": 0,
+    "clip_grad_norm": 1
+  },
+  "inference": {
+    "frames": 32,
+    "max_pixels": 262144,
+    "greedy": true,
+    "max_new_tokens": 64,
+    "pure_student": true,
+    "teacher_lookup_or_fallback": false,
+    "upload_authorized_in_this_task": false,
+    "seed": 1,
+    "single_gpu": 0
+  },
+  "strict_whole_answer_validation": true,
+  "training_unit_suffixes_corrected": 18,
+  "teacher_values_changed_vs_parent_training": 0,
+  "one_round_scope": true,
+  "expected_filename": "TRACKB-FROM0863-MAIN7493-LR2E5-E1-UNTESTED.csv",
+  "official_score": null,
+  "upload_authorized": false,
+  "additional_round_authorized": false,
+  "inherited_provenance_gaps_preserved": true,
+  "ledger_snapshot_sha256": "bfa1920db5b5a2db3e45a87cbd317a01daf0436984c68e3982a2f336bb289bf9",
+  "resource_policy": {
+    "port": 50019,
+    "gpu": 0,
+    "minimum_free_training_GiB": 80,
+    "minimum_disk_GiB": 2,
+    "temporary_frame_cache_on_ram": true
+  }
+}

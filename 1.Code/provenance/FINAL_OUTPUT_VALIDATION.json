@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "rows": 3289,
+  "fresh_process": true,
+  "primary_validator_not_imported": true,
+  "all_accepted_rows_whole_response_replayed": true,
+  "all_accepted_rows_requested_unit_verified": true,
+  "all_accepted_rows_normal_eos_verified": true,
+  "maximum_two_generations_per_row": true,
+  "retried_count": 4,
+  "unresolved_ids": [],
+  "csv_unchanged_sha256": "1216ece8fae28f39431a719973794381d29e813214eacbcb66a1da82cb5d5b56",
+  "numerical_unit_scaling_applied": false,
+  "official_score": null
+}

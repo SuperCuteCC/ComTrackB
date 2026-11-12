@@ -1,0 +1,33 @@
+{
+  "candidate_id": "TRACKB-FROM0863-MAIN7493-LR2E5-E1",
+  "submission_file": "TRACKB-FROM0863-MAIN7493-LR2E5-E1-UNTESTED.csv",
+  "sha256": "1216ece8fae28f39431a719973794381d29e813214eacbcb66a1da82cb5d5b56",
+  "track": "B · Open weight",
+  "track_letter": "B",
+  "status": "pass",
+  "average_mra": 0.866,
+  "S2": 0.86,
+  "D2": 0.887,
+  "S3": 0.851,
+  "D3": 0.866,
+  "invalid_percent": 0.0,
+  "matched": 3010,
+  "missing": 0,
+  "submission_date": "2026-10-24",
+  "displayed_submission_time": "11:53",
+  "submission_time_zone": "Asia/Shanghai",
+  "submission_time_utc": "2026-10-24T03:53:00Z",
+  "submission_time_precision": "minute",
+  "record_id": null,
+  "record_id_note": "The portal excerpt supplied the timestamp and score but no record ID; use the timestamp as the submission identifier.",
+  "hardware": {
+    "gpu": "NVIDIA RTX 6000D",
+    "cards": 8,
+    "memory_mib_per_card": 85651,
+    "driver_version": "595.99.02",
+    "note": "Original server checked with nvidia-smi on 2026-10-28; the recorded training and inference jobs targeted GPU 0."
+  },
+  "source": "Official portal result pasted by user; authenticated portal and upload hash not independently fetched",
+  "recorded_at": "2026-10-27T21:12:18.132415+00:00",
+  "artifact_role": "Final round: one-epoch lr=2e-5 continuation from the 0.863 adapter, pure LoRA, public base"
+}

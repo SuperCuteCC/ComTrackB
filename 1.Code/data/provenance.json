@@ -1,0 +1,10 @@
+{
+  "source_csv": "1.Code/submission/TRACKB-FROM0863-MAIN7493-LR2E5-E1-UNTESTED.csv",
+  "source_sha256": "1216ece8fae28f39431a719973794381d29e813214eacbcb66a1da82cb5d5b56",
+  "operation": "Clear parsed_value only; retain all other fields and row order.",
+  "input_table": "1.Code/data/questions.csv",
+  "sha256": "5f1e8367308ebaee6718929d74a175fecd6813a8d5862fc72a709d07d2328c18",
+  "input_table_source": "Official submission template with parsed_value empty; identical to 1.Code/training_materials/input-template-NO-ANSWERS.csv",
+  "videos": "568 public QuantiPhy MP4 files, pinned per file in 1.Code/data/VIDEO_MANIFEST_SHA256.csv",
+  "input_and_media_version_confirmed": true
+}

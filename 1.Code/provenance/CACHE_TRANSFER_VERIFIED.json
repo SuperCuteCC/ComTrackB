@@ -1,0 +1,11 @@
+{
+  "time": 1792768175.2529082,
+  "cache_files_verified": 568,
+  "cache_bytes": 6694617344,
+  "source_metadata_sha256": "2abce816dca41d6de74e526cd992d6368fed5c1f75396725501857653fbc7de9",
+  "stream_sha256": "48399d88dba50639ecc4d77dc86b1514150ac555adc9825bb256e67c449c6f3f",
+  "encrypted": true,
+  "ram_path": "/dev/shm/codex7-distill0863-lr2e5-20261023T150330Z",
+  "source_path_relocated_only": true,
+  "all_frame_bytes_unchanged": true
+}

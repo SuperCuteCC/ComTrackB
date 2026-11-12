@@ -1,0 +1,11 @@
+{
+  "rows": 3289,
+  "unique_ids": 3289,
+  "columns": 10,
+  "metadata_order_preserved": true,
+  "generations_checkpoint_verified": true,
+  "archive_sha256": "a62fff6ea5ee3b88878cb4646a673f83122bcc1ea0a98336640b6eda7653d6e5",
+  "adapter_sha256": "36d20e83e193329568783c7831a81507bb030aa5708e62faaaceaa18e7ee95f3",
+  "csv_sha256": "1216ece8fae28f39431a719973794381d29e813214eacbcb66a1da82cb5d5b56",
+  "official_score": null
+}

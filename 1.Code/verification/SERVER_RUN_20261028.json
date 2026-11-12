@@ -1,0 +1,57 @@
+{
+  "record": "Commands executed on the original server, 2026-10-28 Asia/Shanghai (server clock is UTC)",
+  "python": "/home/ubuntu/venvs/codeasworld_czq/bin/python3",
+  "pythonpath_extra": "/home/ubuntu/czq/experiments/worldmodel-20261014-czq/student0804-deps",
+  "package": "/home/ubuntu/czq/delivery-from0863-20261028",
+  "base_dir": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+  "videos_dir": "/home/ubuntu/data/quantiphy_czq/QuantiPhy",
+  "runs": [
+    {
+      "name": "stage_inference_directory",
+      "work_dir": "/home/ubuntu/czq/verify-from0863-20261028",
+      "command": "cd /home/ubuntu/czq/delivery-from0863-20261028 && PYTHONPATH=/home/ubuntu/czq/experiments/worldmodel-20261014-czq/student0804-deps /home/ubuntu/venvs/codeasworld_czq/bin/python3 -X utf8 verification/prepare_runtime.py --work-dir /home/ubuntu/czq/verify-from0863-20261028 --base-dir /home/ubuntu/src/Code-as-World_czq/weights/4b --videos-dir /home/ubuntu/data/quantiphy_czq/QuantiPhy",
+      "result": "Base weight SHA-256, 568 videos, final adapter and staging inputs verified; STAGING_REPORT.json written; no GPU work"
+    },
+    {
+      "name": "gpu_smoke_8_questions",
+      "work_dir": "/home/ubuntu/czq/verify-from0863-20261028",
+      "command": "cd /home/ubuntu/czq/verify-from0863-20261028 && CUDA_VISIBLE_DEVICES=0 PYTHONPATH=/home/ubuntu/czq/experiments/worldmodel-20261014-czq/student0804-deps /home/ubuntu/venvs/codeasworld_czq/bin/python3 student/infer.py --job student --smoke",
+      "status_file": "student/epoch1-hf-smoke-czq/status-czq.json",
+      "result": "SMOKE_COMPLETE, 8/8, 0 parse failures, 23.05 s; all eight answers identical to the same ids in outputs/generations-hf.jsonl"
+    },
+    {
+      "name": "gpu_full_replay_3289_questions",
+      "work_dir": "/home/ubuntu/czq/verify-from0863-20261028",
+      "command": "cd /home/ubuntu/czq/verify-from0863-20261028 && CUDA_VISIBLE_DEVICES=0 PYTHONPATH=/home/ubuntu/czq/experiments/worldmodel-20261014-czq/student0804-deps setsid nohup /home/ubuntu/venvs/codeasworld_czq/bin/python3 student/infer.py --job student > full-infer.log 2>&1 < /dev/null &",
+      "status_file": "student/epoch1-infer32f-czq/status-czq.json",
+      "result": "COMPLETE, 3289/3289, 0 parse failures, 5478.92 s; CSV, generation journal and frozen predictions byte-identical to the delivered artifacts"
+    },
+    {
+      "name": "rebuild_training_frame_cache",
+      "work_dir": "/home/ubuntu/czq/cache-rebuild2-20261028",
+      "cache_dir": "/home/ubuntu/czq/cache-rebuild-20261028/cache16",
+      "command": "cd /home/ubuntu/czq/delivery-from0863-20261028 && PYTHONPATH=/home/ubuntu/czq/experiments/worldmodel-20261014-czq/student0804-deps /home/ubuntu/venvs/codeasworld_czq/bin/python3 -X utf8 verification/prepare_runtime.py --work-dir /home/ubuntu/czq/cache-rebuild2-20261028 --cache-dir /home/ubuntu/czq/cache-rebuild-20261028/cache16 --base-dir /home/ubuntu/src/Code-as-World_czq/weights/4b --videos-dir /home/ubuntu/data/quantiphy_czq/QuantiPhy --rebuild-cache",
+      "report_file": "verification/SERVER_STAGING_REPORT_CACHE_REBUILD.json (server: STAGING_REPORT.json)",
+      "result": "cache.state = ALL_568_CACHE_HASHES_MATCHED; 568 videos, 3289 rows remapped; two videos decoded below 16 frames (internet_0038 -> 14, internet_0067 -> 12); training command staged and printed, not launched"
+    }
+  ],
+  "earlier_attempt": {
+    "name": "rebuild_training_frame_cache_first_try",
+    "work_dir": "/home/ubuntu/czq/cache-rebuild-20261028",
+    "outcome": "Stopped after 531 of 568 files at internet_0038.mp4 (15 frames) with ValueError: nframes should in interval [2, 15], but got 16",
+    "evidence": "The 531 verified files were reused and re-checked by SHA-256 in the successful run above"
+  },
+  "host": {
+    "hostname": "6000d-server",
+    "gpus": 8,
+    "gpu_model": "NVIDIA RTX 6000D",
+    "gpu_memory_mib_per_device": 85651,
+    "gpu_driver_version": "595.99.02",
+    "cuda_version": "12.8",
+    "gpu_used": 0
+  },
+  "not_performed": [
+    "No new training run was launched.",
+    "Nothing was uploaded or published."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "package": "/home/ubuntu/czq/delivery-from0863-20261028",
+  "work_dir": "/home/ubuntu/czq/cache-rebuild2-20261028",
+  "base": {
+    "path": "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+    "sha256": "verified"
+  },
+  "videos": {
+    "path": "/home/ubuntu/data/quantiphy_czq/QuantiPhy",
+    "count": 568,
+    "sha256": "all verified"
+  },
+  "inference_source_changes": [
+    {
+      "from": "J/'assets/videos'",
+      "to": "/home/ubuntu/data/quantiphy_czq/QuantiPhy"
+    }
+  ],
+  "checkpoint": "supplied final_lora, copied without edits",
+  "cache": {
+    "state": "ALL_568_CACHE_HASHES_MATCHED",
+    "cache_dir": "/home/ubuntu/czq/cache-rebuild-20261028/cache16",
+    "videos": 568,
+    "training_rows": 3289,
+    "videos_decoded_below_16_frames": {
+      "internet_0038.mp4": 14,
+      "internet_0067.mp4": 12
+    }
+  },
+  "commands": {
+    "inference_smoke": [
+      "/home/ubuntu/venvs/codeasworld_czq/bin/python3",
+      "-X",
+      "utf8",
+      "/home/ubuntu/czq/cache-rebuild2-20261028/student/infer.py",
+      "--job",
+      "student",
+      "--smoke"
+    ],
+    "inference_full": [
+      "/home/ubuntu/venvs/codeasworld_czq/bin/python3",
+      "-X",
+      "utf8",
+      "/home/ubuntu/czq/cache-rebuild2-20261028/student/infer.py",
+      "--job",
+      "student"
+    ],
+    "training": [
+      "/home/ubuntu/venvs/codeasworld_czq/bin/python3",
+      "-X",
+      "utf8",
+      "/home/ubuntu/czq/cache-rebuild2-20261028/train.py",
+      "--base",
+      "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+      "--processor",
+      "/home/ubuntu/src/Code-as-World_czq/weights/4b",
+      "--data",
+      "/home/ubuntu/czq/cache-rebuild2-20261028/training/train.json",
+      "--run",
+      "/home/ubuntu/czq/cache-rebuild2-20261028/retrained",
+      "--lr",
+      "2e-5",
+      "--epochs",
+      "1",
+      "--init-adapter",
+      "/home/ubuntu/czq/delivery-from0863-20261028/weights/initial_lora_0863"
+    ]
+  },
+  "gpu_execution_performed": false
+}
