@@ -20,6 +20,7 @@ After cloning this repository, run the following from its root directory:
 ```bash
 git lfs install
 git lfs pull
+```
 
 The public base model weights and video files are not bundled.
 Their exact revisions, SHA-256 hashes, and retrieval information are
